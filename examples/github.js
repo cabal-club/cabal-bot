@@ -26,11 +26,8 @@ webhooks.on('*', ({ id, name, payload }) => {
       case 'push':
         message = `[${payload.repository.full_name}] ${payload.pusher.name} pushed ${payload.commits.length} commits.`
         break
-      case 'reopened':
-      case 'opened':
-      case 'closed':
-      case 'created':
-        message = `[${payload.organization.login}/${payload.repository.name}] ${payload.issue.user.login} ${name} ${payload.issue.title} ${payload.issue.html_url}`
+      case 'issues':
+        message = `[${payload.organization.login}/${payload.repository.name}] ${payload.issue.user.login} ${payload.action} ${payload.issue.title} ${payload.issue.html_url}`
         break
       case 'issue_comment':
         message = `[${payload.organization.login}/${payload.repository.name}] ${payload.comment.user.login}: ${payload.comment.body.slice(0, 20)}...${payload.comment.html_url}`
