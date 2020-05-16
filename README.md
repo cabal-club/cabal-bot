@@ -1,5 +1,5 @@
 ## cabal-bot
-
+![](https://user-images.githubusercontent.com/3862362/82116026-da1ccb80-9766-11ea-90f1-11d4c0ad4854.png)
 ```
 npm install cabal-bot
 ```
