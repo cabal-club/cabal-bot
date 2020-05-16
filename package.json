@@ -1,0 +1,20 @@
+{
+  "name": "cabal-bot",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "./cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "cabal-client": "^4.1.0",
+    "require-yml": "^2.0.0",
+    "routes": "^2.1.0"
+  },
+  "devDependencies": {
+    "@octokit/webhooks": "^7.6.0"
+  }
+}
