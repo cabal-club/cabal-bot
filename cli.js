@@ -22,7 +22,7 @@ const bot = new Bot({
 bot.join(config.keys, (err) => {
   if (err) throw err
   if (argv.port || config.port) {
-    const server = createServer(bot.say)
+    const server = createServer(bot.say.bind(bot))
 
     server.listen(config.port, () => {
       console.log('Listening on', config.port)
